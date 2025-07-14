@@ -78,10 +78,13 @@ if (isset($_SESSION['utilizator']) && isset($_GET['user_id'])) {
             <div class="mb-3">
                 <label for="u_department" class="form-label">department</label>
                 <select class="form-control" id="u_department" name="u_department">
-                    <option value="Finance" <?php echo $user['department'] == 'Finance' ? 'selected' : ''; ?>>Finance</option>
-                    <option value="Marketing" <?php echo $user['department'] == 'Marketing' ? 'selected' : ''; ?>>Marketing</option>
-                    <option value="IT" <?php echo $user['department'] == 'IT' ? 'selected' : ''; ?>>IT</option>
-                    <option value="Human Resources" <?php echo $user['department'] == 'Human Resources' ? 'selected' : ''; ?>>Human Resources</option>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($departmentsResult)): ?>
+                        <option value="<?php echo htmlspecialchars($row['department_name']); ?>"
+                            <?php echo ($user['department'] == $row['department_name']) ? 'selected' : ''; ?>>
+                            <?php echo htmlspecialchars($row['department_name']); ?>
+                        </option>
+                    <?php endwhile; ?>
                 </select>
             </div>
 
