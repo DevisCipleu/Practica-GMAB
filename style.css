@@ -1,0 +1,232 @@
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+
+.login-button {
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+
+}
+
+#make-account-button {
+    font-size: 22px;
+    padding: auto;
+}
+
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.login-button:hover {
+    background-color: #00b383;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.nav-link:hover,
+.nav-link:active {
+    color: #000;
+}
+
+@media(min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.hero-section {
+    background: url(images/pexels-photo-2041385.webp) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #009970,
+        /* Top left */
+        1px -1px 0 #009970,
+        /* Top right */
+        -1px 1px 0 #009970,
+        /* Bottom left */
+        3px 3px 0 #009970;
+    /* Bottom right */
+
+}
+
+
+.spinner-wrapper {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.spinner-border {
+    height: 60px;
+    width: 60px;
+}
+
+.labels {
+    margin-bottom: 15px;
+}
+
+.label-spacing {
+    width: 160px;
+    text-align: right;
+}
+
+
+
+.error {
+    color: red;
+    padding-left: 15px;
+    width: 100%;
+}
+
+#registration {
+    /* border: 3px solid black;
+    background-color: burlywood; */
+    width: 500px;
+
+    padding: 20px;
+    border: 3px solid #0d6efd;
+    border-radius: 5%;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.error-border {
+    border: 3px solid red;
+}
+
+.correct-border {
+    border: 3px solid #03C03C;
+}
+
+
+
+
+/* login.html file */
+
+#login-form {
+    padding: 20px;
+    border: 3px solid #0d6efd;
+    border-radius: 5%;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+}
+
+table {
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+th,
+td {
+    padding-right: 6px;
+}
+
+
+#user_update_form {
+    padding: 20px;
+    border: 3px solid #0d6efd;
+    border-radius: 3%;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+    margin-bottom: 40px;
+}
+
+
+
+.search-user {
+
+    border: 3px solid #0d6efd;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+#update-departments-form {
+    padding: 20px;
+    border: 3px solid #0d6efd;
+    border-radius: 3%;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    /*object-fit: cover;*/
+    /*border-radius: 50%;*/
+}
